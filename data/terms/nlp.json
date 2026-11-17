@@ -1,0 +1,123 @@
+[
+  {
+    "id": "natural-language-processing",
+    "term": "Natural Language Processing",
+    "cluster": "nlp",
+    "level": "beginner",
+    "short": "The subfield of AI focused on enabling computers to analyze, understand, translate, and generate human language.",
+    "eli5": "Teaching computers how human words, grammar, and meaning work so they can read and talk with us.",
+    "example": "Powering voice assistants, search engines, spellcheckers, and document summarizers.",
+    "related": ["artificial-intelligence", "tokenization", "llm", "machine-translation"]
+  },
+  {
+    "id": "text-preprocessing",
+    "term": "Text Preprocessing",
+    "cluster": "nlp",
+    "level": "beginner",
+    "short": "Cleaning and normalizing raw text—handling whitespace, Unicode, punctuation, or casing—before feeding it to a model.",
+    "eli5": "Washing and chopping vegetables before you start cooking so everything fits the recipe cleanly.",
+    "example": "Stripping HTML tags and normalizing accented characters before indexing articles.",
+    "related": ["natural-language-processing", "tokenization", "stemming-lemmatization", "data-cleaning"]
+  },
+  {
+    "id": "tokenization",
+    "term": "Tokenization",
+    "cluster": "nlp",
+    "level": "beginner",
+    "short": "Splitting raw text into discrete units—words, subwords, or characters—that an NLP model can process numerically.",
+    "eli5": "Breaking a long LEGO castle down into individual standard bricks before counting or rebuilding it.",
+    "example": "Splitting 'unbelievable' into subword pieces like ['un', 'believ', 'able'].",
+    "related": ["token", "text-preprocessing", "bag-of-words", "n-gram"],
+    "demo": "tokenizer"
+  },
+  {
+    "id": "bag-of-words",
+    "term": "Bag of Words",
+    "cluster": "nlp",
+    "level": "beginner",
+    "short": "A classic text representation that counts how often each word appears in a document while ignoring word order.",
+    "eli5": "Cutting every word out of a page, tossing them into a paper bag, and counting how many of each word you have.",
+    "example": "Representing movie reviews as word-count vectors to classify positive vs. negative sentiment.",
+    "related": ["tokenization", "tf-idf", "word-embeddings", "n-gram"]
+  },
+  {
+    "id": "tf-idf",
+    "term": "TF-IDF",
+    "cluster": "nlp",
+    "level": "intermediate",
+    "short": "Term Frequency–Inverse Document Frequency: a weighting score that highlights words frequent in one document yet rare across the corpus.",
+    "eli5": "Giving higher importance to distinctive words like 'supernova' while downplaying common filler words like 'the'.",
+    "example": "Keyword search engines ranking pages that uniquely mention a user's rare technical term.",
+    "related": ["bag-of-words", "retrieval", "natural-language-processing"]
+  },
+  {
+    "id": "word-embeddings",
+    "term": "Word Embeddings",
+    "cluster": "nlp",
+    "level": "intermediate",
+    "short": "Dense vector representations (such as Word2Vec or GloVe) trained so words appearing in similar contexts occupy nearby points in space.",
+    "eli5": "Placing every word on a giant meaning map where 'coffee' sits right next to 'tea' and far from 'submarine'.",
+    "example": "Famous vector arithmetic where vector('king') - vector('man') + vector('woman') lands near 'queen'.",
+    "related": ["embedding", "vector", "cosine-similarity", "bag-of-words"]
+  },
+  {
+    "id": "named-entity-recognition",
+    "term": "Named Entity Recognition",
+    "cluster": "nlp",
+    "level": "intermediate",
+    "short": "An NLP task that detects and classifies real-world entities in text such as people, organizations, dates, and locations.",
+    "eli5": "Highlighting a news article with colored markers: yellow for people, blue for places, and green for companies.",
+    "example": "Extracting 'Ada Lovelace' [PERSON] and 'London' [LOCATION] from a biography paragraph.",
+    "related": ["natural-language-processing", "parsing", "classification", "tokenization"]
+  },
+  {
+    "id": "sentiment-analysis",
+    "term": "Sentiment Analysis",
+    "cluster": "nlp",
+    "level": "beginner",
+    "short": "Determining the emotional tone or attitude—such as positive, negative, or neutral—expressed in a piece of text.",
+    "eli5": "Reading a customer review and telling right away whether the writer is thrilled, annoyed, or neutral.",
+    "example": "Monitoring thousands of product reviews to spot sudden frustration after a software update.",
+    "related": ["classification", "bag-of-words", "natural-language-processing"]
+  },
+  {
+    "id": "parsing",
+    "term": "Parsing",
+    "cluster": "nlp",
+    "level": "intermediate",
+    "short": "Analyzing a sentence's grammatical structure to map parts of speech and how words syntactically depend on one another.",
+    "eli5": "Diagramming a sentence in school to see which word is the noun, which is the verb, and who did what to whom.",
+    "example": "Building a dependency tree showing that 'chased' connects subject 'cat' to object 'mouse'.",
+    "related": ["natural-language-processing", "named-entity-recognition", "sequence-models"]
+  },
+  {
+    "id": "machine-translation",
+    "term": "Machine Translation",
+    "cluster": "nlp",
+    "level": "intermediate",
+    "short": "Automatically translating text or speech from one human language into another while preserving meaning and fluency.",
+    "eli5": "An automated bilingual interpreter turning a Japanese menu into natural English on your phone.",
+    "example": "Sequence-to-sequence Transformers translating legal contracts between Spanish and German.",
+    "related": ["transformer", "attention", "sequence-models", "natural-language-processing"]
+  },
+  {
+    "id": "stemming-lemmatization",
+    "term": "Stemming & Lemmatization",
+    "cluster": "nlp",
+    "level": "beginner",
+    "short": "Reducing inflected words to a shared base form—either by chopping suffixes (stemming) or looking up dictionary roots (lemmatization).",
+    "eli5": "Grouping 'running', 'runs', and 'ran' under the single base idea 'run' so searches don't miss matches.",
+    "example": "Lemmatizing 'better' to 'good' or stemming 'studies' to 'studi'.",
+    "related": ["text-preprocessing", "tokenization", "bag-of-words"]
+  },
+  {
+    "id": "n-gram",
+    "term": "N-Gram",
+    "cluster": "nlp",
+    "level": "intermediate",
+    "short": "A contiguous sequence of n items (words or characters) extracted from text to capture local word order and phrases.",
+    "eli5": "Reading a sentence through a sliding window two or three words wide so 'ice cream' stays together.",
+    "example": "Bigram ('not', 'good') reversing the positive signal of 'good' in sentiment classification.",
+    "related": ["tokenization", "bag-of-words", "next-token-prediction"]
+  }
+]

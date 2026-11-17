@@ -1,0 +1,124 @@
+[
+  {
+    "id": "generation",
+    "term": "Generation",
+    "cluster": "generative-ai",
+    "level": "beginner",
+    "short": "The inference process where a generative model samples new tokens, pixels, or audio frames conditioned on an input prompt or context.",
+    "eli5": "After reading your prompt, the model writes out its answer piece by piece like an author typing live.",
+    "example": "Streaming a grounded answer token by token from retrieved RAG documents.",
+    "related": ["next-token-prediction", "autoregressive-model", "temperature", "context-window"],
+    "demo": "next-token-prediction"
+  },
+  {
+    "id": "next-token-prediction",
+    "term": "Next-Token Prediction",
+    "cluster": "generative-ai",
+    "level": "beginner",
+    "short": "Predicting a probability distribution over the entire vocabulary for which token should come immediately after the preceding sequence.",
+    "eli5": "Playing fill-in-the-blank one word at a time: 'The cat sat on the ___' -> 'mat' (72%), 'sofa' (15%).",
+    "example": "An LLM estimating probabilities for thousands of candidate tokens before sampling one.",
+    "related": ["token", "softmax", "temperature", "pretraining", "generation"],
+    "demo": "next-token-prediction"
+  },
+  {
+    "id": "autoregressive-model",
+    "term": "Autoregressive Model",
+    "cluster": "generative-ai",
+    "level": "intermediate",
+    "short": "A generative model that produces a sequence step by step, feeding each newly generated token back as context for the next step.",
+    "eli5": "Writing a story where every new word you put down becomes part of the sentence you read to pick the next word.",
+    "example": "Decoder-only LLMs appending each sampled token until an end-of-sequence marker appears.",
+    "related": ["next-token-prediction", "generation", "transformer", "llm"]
+  },
+  {
+    "id": "top-k-sampling",
+    "term": "Top-K Sampling",
+    "cluster": "generative-ai",
+    "level": "intermediate",
+    "short": "A decoding strategy that keeps only the K highest-probability candidate tokens at each step and redistributes probability among them.",
+    "eli5": "Narrowing a restaurant menu of 50,000 dishes down to only the top 40 favorites before rolling a die.",
+    "example": "Using K=40 to block absurd ultra-low-probability words while keeping phrasing varied.",
+    "related": ["top-p-sampling", "temperature", "next-token-prediction", "softmax"]
+  },
+  {
+    "id": "top-p-sampling",
+    "term": "Top-P (Nucleus) Sampling",
+    "cluster": "generative-ai",
+    "level": "intermediate",
+    "short": "A dynamic decoding method that picks from the smallest set of top candidate tokens whose cumulative probability reaches threshold P.",
+    "eli5": "Picking from a short list when one answer is super obvious, and a wider list when lots of words fit equally well.",
+    "example": "Setting top-p to 0.9 so predictable facts stay crisp while open-ended metaphors stay expressive.",
+    "related": ["top-k-sampling", "temperature", "probability-distribution", "next-token-prediction"]
+  },
+  {
+    "id": "diffusion-model",
+    "term": "Diffusion Model",
+    "cluster": "generative-ai",
+    "level": "intermediate",
+    "short": "A generative architecture that learns to create crisp images or audio by reversing a gradual noise-corruption process step by step.",
+    "eli5": "Starting with pure TV static and gently sculpting away the fuzz over dozens of steps until a sharp painting emerges.",
+    "example": "Generating high-resolution illustrations from text prompts using latent diffusion.",
+    "related": ["denoising", "text-to-image", "latent-space"]
+  },
+  {
+    "id": "denoising",
+    "term": "Denoising",
+    "cluster": "generative-ai",
+    "level": "intermediate",
+    "short": "Iteratively predicting and subtracting random Gaussian noise from a corrupted sample to recover coherent structure.",
+    "eli5": "Wiping dust off a foggy window in small passes until the clear street scene shines through.",
+    "example": "A U-Net or diffusion Transformer estimating noise at step t=25 out of 50.",
+    "related": ["diffusion-model", "vae", "latent-space"]
+  },
+  {
+    "id": "latent-space",
+    "term": "Latent Space",
+    "cluster": "generative-ai",
+    "level": "advanced",
+    "short": "A compressed internal coordinate space learned by a model where high-level attributes vary smoothly along geometric directions.",
+    "eli5": "A secret control panel of hidden sliders—like 'smile amount' or 'sunset warmth'—packed inside compact numbers.",
+    "example": "Interpolating halfway between two points in latent space to blend two musical styles smoothly.",
+    "related": ["vae", "diffusion-model", "dimensionality-reduction", "embedding"]
+  },
+  {
+    "id": "vae",
+    "term": "Variational Autoencoder (VAE)",
+    "cluster": "generative-ai",
+    "level": "advanced",
+    "short": "A generative autoencoder that compresses inputs into a smooth probabilistic latent distribution and reconstructs samples back out.",
+    "eli5": "A machine that shrinks a photo into a neat summary recipe and can rebuild realistic variations from nearby recipes.",
+    "example": "Compressing 512x512 images into compact latent grids inside modern diffusion pipelines.",
+    "related": ["latent-space", "diffusion-model", "probability-distribution"]
+  },
+  {
+    "id": "gan",
+    "term": "Generative Adversarial Network (GAN)",
+    "cluster": "generative-ai",
+    "level": "advanced",
+    "short": "Two neural networks trained in competition: a Generator creating synthetic samples and a Discriminator trying to spot fakes.",
+    "eli5": "An art forger and an art detective practicing against each other until the forger's paintings look indistinguishable from real ones.",
+    "example": "Synthesizing photorealistic textures or upscaling blurry video frames.",
+    "related": ["diffusion-model", "latent-space", "loss-function"]
+  },
+  {
+    "id": "text-to-image",
+    "term": "Text-to-Image",
+    "cluster": "generative-ai",
+    "level": "beginner",
+    "short": "Conditioning an image generator on natural-language text embeddings so visual synthesis matches the user's written description.",
+    "eli5": "Describing a scene out loud to an illustrator—'an astronaut reading in a greenhouse'—and watching it appear.",
+    "example": "Cross-attending prompt token embeddings inside a diffusion model to guide composition and style.",
+    "related": ["diffusion-model", "embedding", "attention", "multimodal-model"]
+  },
+  {
+    "id": "multimodal-model",
+    "term": "Multimodal Model",
+    "cluster": "generative-ai",
+    "level": "intermediate",
+    "short": "A unified AI model that natively processes and relates multiple data types such as text, images, audio, and video.",
+    "eli5": "An AI that can read a paragraph, look at a diagram, and listen to a voice clip all with the same brain.",
+    "example": "Uploading a whiteboard sketch and asking an assistant to turn it into working HTML and CSS.",
+    "related": ["vision-transformer", "llm", "text-to-image", "embedding"]
+  }
+]

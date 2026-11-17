@@ -1,0 +1,122 @@
+[
+  {
+    "id": "reinforcement-learning",
+    "term": "Reinforcement Learning",
+    "cluster": "reinforcement-learning",
+    "level": "beginner",
+    "short": "A learning paradigm where an agent learns optimal actions by interacting with an environment and maximizing cumulative rewards.",
+    "eli5": "Training a puppy with treats: it tries different moves, remembers what earned a snack, and gets better over time.",
+    "example": "Teaching a robotic arm to stack blocks smoothly or a system to play Go at grandmaster level.",
+    "related": ["agent", "environment", "reward-function", "policy"]
+  },
+  {
+    "id": "agent",
+    "term": "RL Agent",
+    "cluster": "reinforcement-learning",
+    "level": "beginner",
+    "short": "The decision-maker in reinforcement learning that observes environment states and selects actions to maximize long-term reward.",
+    "eli5": "The player holding the game controller, watching the screen and deciding which button to press next.",
+    "example": "A thermostat controller adjusting HVAC settings based on room temperature and electricity pricing.",
+    "related": ["reinforcement-learning", "environment", "policy", "ai-agent"]
+  },
+  {
+    "id": "environment",
+    "term": "Environment",
+    "cluster": "reinforcement-learning",
+    "level": "beginner",
+    "short": "The external world or simulation that responds to an agent's actions by returning new states and reward signals.",
+    "eli5": "The game board, physics rules, and referee that react whenever a player makes a move.",
+    "example": "A simulated warehouse floor where navigation bots receive lidar readings and collision penalties.",
+    "related": ["reinforcement-learning", "agent", "reward-function", "markov-decision-process"]
+  },
+  {
+    "id": "reward-function",
+    "term": "Reward Function",
+    "cluster": "reinforcement-learning",
+    "level": "beginner",
+    "short": "A numerical feedback signal scoring how desirable each state or action transition is toward the agent's goal.",
+    "eli5": "The scoreboard points—+10 for reaching the finish line, -1 for bumping into a wall.",
+    "example": "A trained preference reward model scoring whether an LLM response is helpful and harmless.",
+    "related": ["reinforcement-learning", "rlhf", "policy", "ai-alignment"]
+  },
+  {
+    "id": "policy",
+    "term": "Policy",
+    "cluster": "reinforcement-learning",
+    "level": "intermediate",
+    "short": "The strategy function mapping an observed state to an action or probability distribution over actions.",
+    "eli5": "The agent's playbook—a rulebook saying 'when the board looks like this, here is my best move'.",
+    "example": "An LLM's token-generation weights acting as a policy optimized during RLHF.",
+    "related": ["reinforcement-learning", "value-function", "policy-gradient", "ppo"]
+  },
+  {
+    "id": "value-function",
+    "term": "Value Function",
+    "cluster": "reinforcement-learning",
+    "level": "intermediate",
+    "short": "An estimate of total expected future reward an agent can earn starting from a given state under its current policy.",
+    "eli5": "Looking at a chess board and estimating 'from here, I probably have an 80% chance to win'.",
+    "example": "A critic network evaluating board strength to guide tree search in game-playing AI.",
+    "related": ["policy", "q-learning", "markov-decision-process"]
+  },
+  {
+    "id": "q-learning",
+    "term": "Q-Learning",
+    "cluster": "reinforcement-learning",
+    "level": "intermediate",
+    "short": "A value-based RL algorithm that learns the quality Q(s, a) of taking action a in state s without needing a world model.",
+    "eli5": "Keeping a cheat-sheet table rating how good every move turns out to be in every situation.",
+    "example": "Learning to balance a virtual pole or clear Atari levels directly from pixel frames.",
+    "related": ["value-function", "exploration-vs-exploitation", "markov-decision-process"]
+  },
+  {
+    "id": "markov-decision-process",
+    "term": "Markov Decision Process (MDP)",
+    "cluster": "reinforcement-learning",
+    "level": "advanced",
+    "short": "The mathematical framework modeling sequential decisions with states, actions, transition probabilities, and rewards.",
+    "eli5": "A formal map of rooms and doors where only the room you're currently standing in determines where you can go next.",
+    "example": "Formulating battery dispatch scheduling as states of charge, demand actions, and hourly grid prices.",
+    "related": ["environment", "policy", "value-function", "reinforcement-learning"]
+  },
+  {
+    "id": "exploration-vs-exploitation",
+    "term": "Exploration vs. Exploitation",
+    "cluster": "reinforcement-learning",
+    "level": "beginner",
+    "short": "The tradeoff between trying unfamiliar actions to discover better rewards (exploration) and picking the best known option (exploitation).",
+    "eli5": "Ordering your favorite pasta every Friday vs. trying the new Thai spot across the street that might be even better.",
+    "example": "Bandit algorithms occasionally testing a new headline variant to see if click-through improves.",
+    "related": ["reinforcement-learning", "q-learning", "agent"]
+  },
+  {
+    "id": "policy-gradient",
+    "term": "Policy Gradient",
+    "cluster": "reinforcement-learning",
+    "level": "advanced",
+    "short": "A family of RL methods that directly adjust policy network parameters via gradient ascent on expected reward.",
+    "eli5": "Turning up the dial on moves that led to good endings and turning down the dial on moves that led to losses.",
+    "example": "Reinforcing reasoning chains in math models when final answers pass automated verification.",
+    "related": ["policy", "gradient", "ppo", "reinforcement-learning"]
+  },
+  {
+    "id": "ppo",
+    "term": "Proximal Policy Optimization (PPO)",
+    "cluster": "reinforcement-learning",
+    "level": "advanced",
+    "short": "A popular actor-critic RL algorithm that clips policy updates so training stays stable without destructive jumps.",
+    "eli5": "Improving your playbook a little bit at a time with safety rails so you don't forget everything you already knew.",
+    "example": "Optimizing an LLM policy against a human preference reward model during RLHF.",
+    "related": ["policy-gradient", "rlhf", "policy", "reward-function"]
+  },
+  {
+    "id": "multi-agent-system",
+    "term": "Multi-Agent System",
+    "cluster": "reinforcement-learning",
+    "level": "advanced",
+    "short": "An environment where multiple autonomous agents interact, cooperate, negotiate, or compete toward shared or individual goals.",
+    "eli5": "A soccer team—or opposing teams—where every player learns how to coordinate with teammates and counter rivals.",
+    "example": "Coordinating a planner agent, coder agent, and reviewer agent on complex software tasks.",
+    "related": ["agent", "ai-agent", "reinforcement-learning", "environment"]
+  }
+]

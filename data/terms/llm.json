@@ -1,0 +1,126 @@
+[
+  {
+    "id": "llm",
+    "term": "Large Language Model (LLM)",
+    "cluster": "llm",
+    "level": "beginner",
+    "short": "A deep Transformer neural network trained on massive text corpora to understand, reason over, and generate human language.",
+    "eli5": "An AI that read a library of millions of books and websites so it can predict helpful, fluent answers to almost any prompt.",
+    "example": "Models that write code, summarize research papers, and hold multi-turn conversations.",
+    "related": ["transformer", "pretraining", "fine-tuning", "rlhf", "context-window"]
+  },
+  {
+    "id": "token",
+    "term": "Token",
+    "cluster": "llm",
+    "level": "beginner",
+    "short": "The fundamental text unit—typically a word, subword, or punctuation mark—that an LLM reads and predicts one step at a time.",
+    "eli5": "A single puzzle piece of language: roughly three-quarters of an English word on average.",
+    "example": "The word 'chatbots' splitting into two tokens: 'chat' (ID 1532) and 'bots' (ID 28411).",
+    "related": ["tokenization", "embedding", "context-window", "next-token-prediction"],
+    "demo": "tokenizer"
+  },
+  {
+    "id": "embedding",
+    "term": "Embedding",
+    "cluster": "llm",
+    "level": "beginner",
+    "short": "A dense list of numbers representing the semantic meaning of a token, sentence, or image in continuous vector space.",
+    "eli5": "Translating an idea into GPS coordinates in 'meaning space' so related concepts live in the same neighborhood.",
+    "example": "Mapping a user support ticket to a 1,536-number vector to find matching help articles.",
+    "related": ["vector", "word-embeddings", "cosine-similarity", "vector-database"]
+  },
+  {
+    "id": "attention",
+    "term": "Attention Mechanism",
+    "cluster": "llm",
+    "level": "intermediate",
+    "short": "A mechanism allowing a model to dynamically weight which parts of an input sequence are most relevant when producing each output.",
+    "eli5": "Using a spotlight while reading so your eyes jump back to the exact earlier word that clarifies a pronoun like 'it'.",
+    "example": "Connecting 'it' strongly to 'battery' rather than 'phone' in 'The phone died because it was old'.",
+    "related": ["self-attention", "multi-head-attention", "transformer", "dot-product"],
+    "demo": "attention-heatmap"
+  },
+  {
+    "id": "self-attention",
+    "term": "Self-Attention",
+    "cluster": "llm",
+    "level": "intermediate",
+    "short": "An attention layer where every token in a sequence compares itself with every other token in the same sequence using Queries, Keys, and Values.",
+    "eli5": "Everyone in a room raising a question ('Query'), waving an introduction tag ('Key'), and sharing notes ('Value') with the best matches.",
+    "example": "Resolving coreference and verb agreement simultaneously across a 4,000-token paragraph.",
+    "related": ["attention", "multi-head-attention", "transformer", "softmax"],
+    "demo": "attention-heatmap"
+  },
+  {
+    "id": "multi-head-attention",
+    "term": "Multi-Head Attention",
+    "cluster": "llm",
+    "level": "advanced",
+    "short": "Running several independent self-attention heads in parallel so the model can track grammar, meaning, and long-range links simultaneously.",
+    "eli5": "Having multiple readers scan the same page at once—one tracking pronouns, one tracking tone, and one tracking dates.",
+    "example": "A 32-head Transformer layer attending to both adjacent punctuation and topic words pages earlier.",
+    "related": ["self-attention", "attention", "transformer"]
+  },
+  {
+    "id": "transformer",
+    "term": "Transformer",
+    "cluster": "llm",
+    "level": "intermediate",
+    "short": "A parallel neural architecture built from stacked self-attention and feed-forward blocks that powers modern LLMs and multimodal AI.",
+    "eli5": "An assembly line of spotlights that looks at all words in a sentence at once instead of plodding through one word at a time.",
+    "example": "The 2017 'Attention Is All You Need' architecture behind modern frontier language and vision models.",
+    "related": ["self-attention", "positional-encoding", "residual-connection", "layer-normalization"]
+  },
+  {
+    "id": "positional-encoding",
+    "term": "Positional Encoding",
+    "cluster": "llm",
+    "level": "advanced",
+    "short": "Mathematical signals added to token embeddings or attention rotations (like RoPE) so a parallel Transformer knows word order.",
+    "eli5": "Stamping seat numbers onto every word so the model still knows who arrived first even though it reads everyone together.",
+    "example": "Rotary Position Embeddings (RoPE) encoding relative distances between tokens in long contexts.",
+    "related": ["transformer", "embedding", "self-attention", "context-window"]
+  },
+  {
+    "id": "context-window",
+    "term": "Context Window",
+    "cluster": "llm",
+    "level": "beginner",
+    "short": "The maximum number of tokens an LLM can hold in working memory at once across both prompt and generated output.",
+    "eli5": "The size of the model's desk—everything it needs to read and write must fit on that desk at the same time.",
+    "example": "Passing a 100-page PDF plus a question into a model with a 128k-token context limit.",
+    "related": ["token", "llm", "rag", "attention"]
+  },
+  {
+    "id": "pretraining",
+    "term": "Pretraining",
+    "cluster": "llm",
+    "level": "intermediate",
+    "short": "The initial large-scale training phase where an LLM learns language, facts, and patterns via self-supervised next-token prediction.",
+    "eli5": "Years of general schooling where the model reads everything to learn how the world and language fit together.",
+    "example": "Training a base model on trillions of web, book, and code tokens before assistant tuning.",
+    "related": ["llm", "next-token-prediction", "fine-tuning", "cross-entropy-loss"]
+  },
+  {
+    "id": "fine-tuning",
+    "term": "Fine-Tuning",
+    "cluster": "llm",
+    "level": "intermediate",
+    "short": "Further training a pretrained model on smaller, specialized, or instruction-formatted datasets to tailor its behavior or domain skill.",
+    "eli5": "Sending a college graduate to medical school or culinary training to master one specialized craft.",
+    "example": "Adapting a general base model on medical Q&A transcripts or structured JSON output examples.",
+    "related": ["pretraining", "lora", "rlhf", "llm"]
+  },
+  {
+    "id": "temperature",
+    "term": "Temperature",
+    "cluster": "llm",
+    "level": "beginner",
+    "short": "A decoding parameter that scales output logits before softmax, balancing predictable accuracy (low) against creative variety (high).",
+    "eli5": "A randomness dial: near zero picks the safest obvious word, while turning it up encourages surprising word choices.",
+    "example": "Setting temperature to 0.1 for SQL generation and 0.8 for brainstorming story titles.",
+    "related": ["softmax", "next-token-prediction", "top-p-sampling", "hallucination"],
+    "demo": "next-token-prediction"
+  }
+]

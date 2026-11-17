@@ -1,0 +1,122 @@
+[
+  {
+    "id": "training-dataset",
+    "term": "Training Dataset",
+    "cluster": "data-evaluation",
+    "level": "beginner",
+    "short": "The primary collection of examples a machine learning model inspects during training to adjust its internal parameters.",
+    "eli5": "All the practice problems and study books you use to learn a subject before taking any exam.",
+    "example": "Curating 100,000 deduplicated code snippets and docstrings for code-model training.",
+    "related": ["validation-set", "test-set", "supervised-learning", "data-cleaning"]
+  },
+  {
+    "id": "validation-set",
+    "term": "Validation Set",
+    "cluster": "data-evaluation",
+    "level": "beginner",
+    "short": "A held-out subset of data used during development to tune hyperparameters, select architectures, and catch overfitting early.",
+    "eli5": "Mock quizzes you take halfway through studying to see which topics still need work before the real final.",
+    "example": "Stopping training when validation loss starts rising even though training loss keeps falling.",
+    "related": ["training-dataset", "test-set", "overfitting", "data-leakage"]
+  },
+  {
+    "id": "test-set",
+    "term": "Test Set",
+    "cluster": "data-evaluation",
+    "level": "beginner",
+    "short": "A strictly locked-away dataset evaluated only once at the end to measure unbiased real-world model performance.",
+    "eli5": "The sealed final exam you never peek at while studying, proving what you truly learned.",
+    "example": "Reporting final F1-score on 5,000 freshly collected, unseen customer support transcripts.",
+    "related": ["training-dataset", "validation-set", "data-leakage", "benchmark"]
+  },
+  {
+    "id": "data-cleaning",
+    "term": "Data Cleaning",
+    "cluster": "data-evaluation",
+    "level": "beginner",
+    "short": "Detecting and fixing corrupted records, duplicates, missing values, and formatting inconsistencies before modeling.",
+    "eli5": "Checking a bowl of berries and tossing out bruised or moldy ones before baking a pie.",
+    "example": "Removing boilerplate cookie banners and near-duplicate web pages from an LLM pretraining corpus.",
+    "related": ["training-dataset", "text-preprocessing", "feature-engineering"]
+  },
+  {
+    "id": "feature-engineering",
+    "term": "Feature Engineering",
+    "cluster": "data-evaluation",
+    "level": "intermediate",
+    "short": "Transforming raw data fields into informative numerical signals that make patterns easier for models to learn.",
+    "eli5": "Turning raw birthdates into 'age' and 'is_weekend' clues so a model spots habits immediately.",
+    "example": "Computing rolling 7-day average spend and ratio-to-limit features for fraud detection.",
+    "related": ["random-forest", "data-cleaning", "classification"]
+  },
+  {
+    "id": "accuracy",
+    "term": "Accuracy",
+    "cluster": "data-evaluation",
+    "level": "beginner",
+    "short": "The fraction of total predictions a model gets right—clear for balanced classes, but misleading when one class is rare.",
+    "eli5": "Your simple percentage score on a quiz—though if 99% of emails aren't spam, always guessing 'not spam' scores 99% while catching zero spam!",
+    "example": "Measuring accuracy on balanced 10-class digit recognition where every digit appears equally often.",
+    "related": ["precision-and-recall", "f1-score", "confusion-matrix"]
+  },
+  {
+    "id": "precision-and-recall",
+    "term": "Precision & Recall",
+    "cluster": "data-evaluation",
+    "level": "intermediate",
+    "short": "Precision measures how many positive flags were truly positive; recall measures how many real positives the model successfully caught.",
+    "eli5": "Precision asks 'when the smoke alarm rings, is there really a fire?'; recall asks 'out of all real fires, how many did the alarm catch?'",
+    "example": "Medical screening prioritizing high recall so dangerous conditions are rarely missed.",
+    "related": ["accuracy", "f1-score", "confusion-matrix"]
+  },
+  {
+    "id": "f1-score",
+    "term": "F1 Score",
+    "cluster": "data-evaluation",
+    "level": "intermediate",
+    "short": "The harmonic mean of precision and recall, rewarding models that balance both catching positives and avoiding false alarms.",
+    "eli5": "A combined report-card grade that drops sharply if either your precision OR your recall is sloppy.",
+    "example": "Scoring Named Entity Recognition extractors where exact entity spans matter on imbalanced text.",
+    "related": ["precision-and-recall", "accuracy", "named-entity-recognition"]
+  },
+  {
+    "id": "confusion-matrix",
+    "term": "Confusion Matrix",
+    "cluster": "data-evaluation",
+    "level": "intermediate",
+    "short": "A table comparing predicted labels against actual labels so you can see exactly which classes get mistaken for one another.",
+    "eli5": "A grid showing not just your total score, but whether you keep confusing 'leopards' with 'cheetahs'.",
+    "example": "Discovering a support router sends 'billing dispute' tickets into 'refund request' 18% of the time.",
+    "related": ["classification", "precision-and-recall", "accuracy"]
+  },
+  {
+    "id": "perplexity",
+    "term": "Perplexity",
+    "cluster": "data-evaluation",
+    "level": "advanced",
+    "short": "Exponentiated cross-entropy loss measuring how surprised a language model is by real text—lower perplexity means better prediction.",
+    "eli5": "The average number of words the model feels torn between at each blank; perplexity of 5 means it's roughly guessing among 5 choices.",
+    "example": "Comparing two pretrained checkpoints on held-out Wikipedia articles to track language modeling progress.",
+    "related": ["cross-entropy-loss", "next-token-prediction", "pretraining", "benchmark"]
+  },
+  {
+    "id": "benchmark",
+    "term": "Benchmark",
+    "cluster": "data-evaluation",
+    "level": "beginner",
+    "short": "A standardized suite of tasks, datasets, and scoring metrics used to compare different models consistently.",
+    "eli5": "An Olympic obstacle course that every runner runs under the exact same rules so times can be fairly compared.",
+    "example": "Evaluating coding models on SWE-bench or reasoning models on standardized math competitions.",
+    "related": ["test-set", "perplexity", "data-leakage"]
+  },
+  {
+    "id": "data-leakage",
+    "term": "Data Leakage",
+    "cluster": "data-evaluation",
+    "level": "advanced",
+    "short": "When information from the test set or future outcomes accidentally leaks into training, inflating scores without real skill.",
+    "eli5": "Accidentally slipping tomorrow's exam answer key into tonight's study packet—you'll score 100% now and fail in real life.",
+    "example": "Benchmark test questions appearing verbatim inside web-scraped LLM pretraining corpora.",
+    "related": ["test-set", "validation-set", "benchmark", "overfitting"]
+  }
+]

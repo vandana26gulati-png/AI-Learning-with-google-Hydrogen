@@ -1,0 +1,122 @@
+[
+  {
+    "id": "prompt",
+    "term": "Prompt",
+    "cluster": "agents-rag",
+    "level": "beginner",
+    "short": "The input text, instructions, examples, or media provided to a generative model to steer what it produces next.",
+    "eli5": "The question, request, or starter note you hand to an AI so it knows what job you want done.",
+    "example": "Asking: 'Summarize this contract in three bullet points for a small-business owner.'",
+    "related": ["prompt-engineering", "context-window", "llm", "generation"]
+  },
+  {
+    "id": "prompt-engineering",
+    "term": "Prompt Engineering",
+    "cluster": "agents-rag",
+    "level": "beginner",
+    "short": "Designing clear instructions, roles, constraints, and examples in prompts to get reliable, accurate outputs from language models.",
+    "eli5": "Learning how to ask crystal-clear questions with helpful context so a bright assistant nails the task on the first try.",
+    "example": "Specifying output JSON format, edge-case rules, and two worked examples inside a system prompt.",
+    "related": ["prompt", "few-shot-prompting", "chain-of-thought", "llm"]
+  },
+  {
+    "id": "few-shot-prompting",
+    "term": "Few-Shot Prompting",
+    "cluster": "agents-rag",
+    "level": "beginner",
+    "short": "Including a handful of input-output examples directly inside the prompt so an LLM infers the pattern without retraining weights.",
+    "eli5": "Showing someone two completed sample puzzles before handing them a third one to solve.",
+    "example": "Providing three sample product descriptions and their tone tags before classifying a fourth.",
+    "related": ["prompt-engineering", "prompt", "context-window"]
+  },
+  {
+    "id": "chain-of-thought",
+    "term": "Chain-of-Thought",
+    "cluster": "agents-rag",
+    "level": "intermediate",
+    "short": "Prompting or training a model to break complex problems into intermediate reasoning steps before stating a final answer.",
+    "eli5": "Showing your scratch-paper math steps out loud instead of blurting out a guess in your head.",
+    "example": "Solving multi-step word problems or debugging race conditions by tracing variable states line by line.",
+    "related": ["prompt-engineering", "llm", "ai-agent"]
+  },
+  {
+    "id": "rag",
+    "term": "RAG (Retrieval-Augmented Generation)",
+    "cluster": "agents-rag",
+    "level": "intermediate",
+    "short": "An architecture that retrieves relevant external documents at query time and places them in the prompt before generating an answer.",
+    "eli5": "Giving the AI an open-book exam where it looks up the exact handbook pages before writing its response.",
+    "example": "An internal company helpdesk bot citing up-to-date HR policy PDFs instead of guessing from stale memory.",
+    "related": ["retrieval", "vector-database", "context-window", "hallucination"]
+  },
+  {
+    "id": "vector-database",
+    "term": "Vector Database",
+    "cluster": "agents-rag",
+    "level": "intermediate",
+    "short": "A specialized database that stores high-dimensional embeddings and performs fast approximate nearest-neighbor similarity search.",
+    "eli5": "A smart library that files books by meaning instead of alphabet, instantly handing you the closest topics.",
+    "example": "Indexing 5 million product manual chunks to retrieve top-5 matches in under 20 milliseconds.",
+    "related": ["embedding", "cosine-similarity", "retrieval", "rag"]
+  },
+  {
+    "id": "retrieval",
+    "term": "Retrieval",
+    "cluster": "agents-rag",
+    "level": "beginner",
+    "short": "Searching a knowledge base using semantic embeddings, keywords, or hybrid scoring to fetch relevant passages for a query.",
+    "eli5": "Running to the filing cabinet and pulling out only the three folders that actually answer the caller's question.",
+    "example": "Combining BM25 keyword search with vector cosine similarity to locate exact error codes and guides.",
+    "related": ["rag", "vector-database", "tf-idf", "reranking"]
+  },
+  {
+    "id": "chunking",
+    "term": "Chunking",
+    "cluster": "agents-rag",
+    "level": "intermediate",
+    "short": "Splitting long documents into smaller, overlapping passages so embeddings stay focused and retrieved snippets fit neatly in context.",
+    "eli5": "Slicing a huge chapter into bite-sized index cards so search finds the exact paragraph instead of the whole book.",
+    "example": "Splitting Markdown docs by section headings into 400-token chunks with 50-token overlap.",
+    "related": ["rag", "retrieval", "token", "context-window"]
+  },
+  {
+    "id": "reranking",
+    "term": "Reranking",
+    "cluster": "agents-rag",
+    "level": "advanced",
+    "short": "A second-stage cross-encoder pass that carefully re-scores top retrieved candidates together with the query for higher precision.",
+    "eli5": "A quick librarian grabs 20 likely books, then a subject expert skims all 20 and puts the best 3 right on top.",
+    "example": "Narrowing 50 vector search hits down to the 4 most authoritative passages before LLM generation.",
+    "related": ["retrieval", "rag", "attention"]
+  },
+  {
+    "id": "ai-agent",
+    "term": "AI Agent",
+    "cluster": "agents-rag",
+    "level": "intermediate",
+    "short": "An LLM-driven system that plans multi-step goals, invokes external tools, inspects observations, and iterates until a task succeeds.",
+    "eli5": "Moving from an AI that just answers questions to an assistant that can look things up, run checks, and finish a whole workflow.",
+    "example": "An engineering agent reading an issue, running unit tests, editing code, and verifying tests pass.",
+    "related": ["tool-use", "function-calling", "chain-of-thought", "agent"]
+  },
+  {
+    "id": "tool-use",
+    "term": "Tool Use",
+    "cluster": "agents-rag",
+    "level": "beginner",
+    "short": "Equipping an AI model with external utilities—calculators, web search, databases, or code sandboxes—to overcome static model limits.",
+    "eli5": "Handing a smart student a calculator and a calendar instead of asking them to multiply huge numbers in their head.",
+    "example": "Calling a live weather API or SQL database instead of guessing real-time inventory numbers.",
+    "related": ["ai-agent", "function-calling", "rag"]
+  },
+  {
+    "id": "function-calling",
+    "term": "Function Calling",
+    "cluster": "agents-rag",
+    "level": "intermediate",
+    "short": "A structured model capability that outputs typed JSON arguments matching a declared API schema so software can execute actions safely.",
+    "eli5": "The AI filling out a neat order form with exact fields instead of writing a messy paragraph your code can't parse.",
+    "example": "Emitting {\"city\": \"Tokyo\", \"unit\": \"celsius\"} to trigger a backend weather lookup function.",
+    "related": ["tool-use", "ai-agent", "prompt-engineering"]
+  }
+]

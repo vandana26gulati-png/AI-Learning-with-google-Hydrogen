@@ -1,0 +1,110 @@
+[
+  {
+    "id": "foundations",
+    "name": "Foundations of AI/ML",
+    "shortName": "Foundations",
+    "symbol": "◈",
+    "color": "#38BDF8",
+    "description": "Core paradigms of artificial intelligence, classical machine learning algorithms, and generalization.",
+    "targetCount": 100
+  },
+  {
+    "id": "math-stats",
+    "name": "Math & Statistics for ML",
+    "shortName": "Math & Stats",
+    "symbol": "∑",
+    "color": "#818CF8",
+    "description": "Linear algebra, calculus, probability, and information theory powering modern models.",
+    "targetCount": 80
+  },
+  {
+    "id": "neural-networks",
+    "name": "Neural Networks & Deep Learning",
+    "shortName": "Neural Nets",
+    "symbol": "◎",
+    "color": "#A78BFA",
+    "description": "Layered architectures, activation functions, backpropagation, and sequence modeling.",
+    "targetCount": 120
+  },
+  {
+    "id": "nlp",
+    "name": "NLP",
+    "shortName": "NLP",
+    "symbol": "¶",
+    "color": "#2DD4BF",
+    "description": "Computational linguistics techniques for parsing, representing, and understanding human language.",
+    "targetCount": 130
+  },
+  {
+    "id": "llm",
+    "name": "LLMs & Transformers",
+    "shortName": "LLMs",
+    "symbol": "✦",
+    "color": "#F59E0B",
+    "description": "Attention-based architectures, scaling, pretraining, and autoregressive language modeling.",
+    "targetCount": 150
+  },
+  {
+    "id": "computer-vision",
+    "name": "Computer Vision",
+    "shortName": "Vision",
+    "symbol": "◫",
+    "color": "#34D399",
+    "description": "Visual perception models for image classification, object detection, and segmentation.",
+    "targetCount": 80
+  },
+  {
+    "id": "generative-ai",
+    "name": "Generative AI",
+    "shortName": "GenAI",
+    "symbol": "✧",
+    "color": "#FB7185",
+    "description": "Models that synthesize new text, images, audio, and multimodal media from learned distributions.",
+    "targetCount": 70
+  },
+  {
+    "id": "reinforcement-learning",
+    "name": "Reinforcement Learning",
+    "shortName": "RL",
+    "symbol": "↻",
+    "color": "#F97316",
+    "description": "Decision-making agents learning optimal policies through trial, error, and reward signals.",
+    "targetCount": 60
+  },
+  {
+    "id": "training-optimization",
+    "name": "Training & Optimization",
+    "shortName": "Optimization",
+    "symbol": "∇",
+    "color": "#EC4899",
+    "description": "Gradient optimization, regularization, parameter-efficient adaptation, and alignment tuning.",
+    "targetCount": 70
+  },
+  {
+    "id": "data-evaluation",
+    "name": "Data & Evaluation",
+    "shortName": "Data & Eval",
+    "symbol": "⊞",
+    "color": "#60A5FA",
+    "description": "Dataset curation, splitting hygiene, statistical metrics, and model benchmarking.",
+    "targetCount": 60
+  },
+  {
+    "id": "agents-rag",
+    "name": "Agents, RAG & Prompting",
+    "shortName": "Agents & RAG",
+    "symbol": "⌘",
+    "color": "#22D3EE",
+    "description": "Prompt engineering, retrieval-augmented generation, vector search, and tool-using AI agents.",
+    "targetCount": 50
+  },
+  {
+    "id": "safety-ethics",
+    "name": "Safety, Ethics & Governance",
+    "shortName": "Safety",
+    "symbol": "△",
+    "color": "#F43F5E",
+    "description": "Alignment, robustness, interpretability, red-teaming, and responsible AI deployment.",
+    "targetCount": 30
+  }
+]

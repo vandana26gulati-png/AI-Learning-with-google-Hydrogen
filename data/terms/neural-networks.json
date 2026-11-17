@@ -1,0 +1,122 @@
+[
+  {
+    "id": "perceptron",
+    "term": "Perceptron",
+    "cluster": "neural-networks",
+    "level": "beginner",
+    "short": "The simplest artificial neuron, computing a weighted sum of inputs plus a bias and passing it through a threshold.",
+    "eli5": "A single tiny voter that weighs pros and cons, then says yes or no if the total passes a tipping point.",
+    "example": "Deciding whether to go for a walk using weighted inputs for sunshine, temperature, and free time.",
+    "related": ["neural-network", "activation-function", "weight-decay"]
+  },
+  {
+    "id": "neural-network",
+    "term": "Neural Network",
+    "cluster": "neural-networks",
+    "level": "beginner",
+    "short": "A layered system of interconnected mathematical units inspired by biological neurons that learns hierarchical representations.",
+    "eli5": "A team of tiny decision-makers arranged in rows, where early rows spot simple clues and later rows put the whole picture together.",
+    "example": "A multi-layer network recognizing spoken words from raw microphone audio features.",
+    "related": ["perceptron", "hidden-layer", "forward-pass", "backpropagation"]
+  },
+  {
+    "id": "activation-function",
+    "term": "Activation Function",
+    "cluster": "neural-networks",
+    "level": "beginner",
+    "short": "A non-linear mathematical curve applied to a neuron's output so networks can learn complex, curved patterns.",
+    "eli5": "A dimmer switch that decides how strongly a neuron fires instead of letting everything stay a flat straight line.",
+    "example": "Using ReLU or GELU after linear layers inside a Transformer feed-forward block.",
+    "related": ["relu", "neural-network", "perceptron", "hidden-layer"]
+  },
+  {
+    "id": "relu",
+    "term": "ReLU",
+    "cluster": "neural-networks",
+    "level": "intermediate",
+    "short": "Rectified Linear Unit—an activation function that passes positive values unchanged and sets negative values to zero.",
+    "eli5": "A one-way valve: negative signals get blocked at zero, while positive signals flow straight through.",
+    "example": "Turning neuron outputs [-2.1, 0.4, 3.0] into [0, 0.4, 3.0] in a hidden layer.",
+    "related": ["activation-function", "hidden-layer", "gradient-descent"]
+  },
+  {
+    "id": "hidden-layer",
+    "term": "Hidden Layer",
+    "cluster": "neural-networks",
+    "level": "beginner",
+    "short": "Any intermediate layer of neurons between the input and final output that extracts abstract internal features.",
+    "eli5": "The kitchen behind the counter: customers only place orders and receive plates, while all the chopping and cooking happen inside.",
+    "example": "Middle layers in a vision model detecting textures and object parts before naming the object.",
+    "related": ["neural-network", "forward-pass", "activation-function", "feature-map"]
+  },
+  {
+    "id": "forward-pass",
+    "term": "Forward Pass",
+    "cluster": "neural-networks",
+    "level": "beginner",
+    "short": "The step where input data flows from the first layer through all hidden layers to produce a model prediction.",
+    "eli5": "Passing a message down a chain of people from start to finish to hear the final answer.",
+    "example": "Sending a tokenized prompt through a Transformer to compute next-token probabilities.",
+    "related": ["neural-network", "backpropagation", "matrix-multiplication", "hidden-layer"]
+  },
+  {
+    "id": "backpropagation",
+    "term": "Backpropagation",
+    "cluster": "neural-networks",
+    "level": "intermediate",
+    "short": "An algorithm using the calculus chain rule to send error gradients backward from output to input so weights can update.",
+    "eli5": "Tracing a missed basketball shot backward from the rim to your wrist, elbow, and stance to know what to adjust next time.",
+    "example": "Computing weight gradients across 32 Transformer layers during a single training step.",
+    "related": ["forward-pass", "gradient", "gradient-descent", "cross-entropy-loss"]
+  },
+  {
+    "id": "sequence-models",
+    "term": "Sequence Models",
+    "cluster": "neural-networks",
+    "level": "intermediate",
+    "short": "Architectures designed to process ordered data—such as text, speech, or time series—where position and order carry meaning.",
+    "eli5": "Models that care about the order of events, knowing 'dog bites man' means something very different from 'man bites dog'.",
+    "example": "Predicting the next word in a sentence or forecasting hourly stock volume.",
+    "related": ["recurrent-neural-network", "lstm", "transformer", "natural-language-processing"]
+  },
+  {
+    "id": "recurrent-neural-network",
+    "term": "Recurrent Neural Network",
+    "cluster": "neural-networks",
+    "level": "intermediate",
+    "short": "A sequence network that processes inputs one step at a time while passing a hidden memory state forward.",
+    "eli5": "Reading a book word by word while keeping a small sticky note in your head summarizing what happened so far.",
+    "example": "Early neural translation systems reading an English sentence word-by-word before generating French.",
+    "related": ["sequence-models", "lstm", "transformer", "hidden-layer"]
+  },
+  {
+    "id": "lstm",
+    "term": "LSTM",
+    "cluster": "neural-networks",
+    "level": "advanced",
+    "short": "Long Short-Term Memory—an RNN variant using gating mechanisms to remember important context across longer sequences.",
+    "eli5": "A smart notebook with 'keep', 'forget', and 'read' gates so old clues don't fade away too quickly.",
+    "example": "Tracking whether the subject at the start of a paragraph was singular or plural ten words later.",
+    "related": ["recurrent-neural-network", "sequence-models", "attention"]
+  },
+  {
+    "id": "residual-connection",
+    "term": "Residual Connection",
+    "cluster": "neural-networks",
+    "level": "advanced",
+    "short": "A shortcut path that adds a layer's input directly to its output, helping gradients flow smoothly through very deep networks.",
+    "eli5": "An express highway lane that lets information skip traffic and keep moving cleanly through a tall building.",
+    "example": "Skip connections around every self-attention and MLP block in GPT and ResNet.",
+    "related": ["neural-network", "transformer", "layer-normalization", "backpropagation"]
+  },
+  {
+    "id": "layer-normalization",
+    "term": "Layer Normalization",
+    "cluster": "neural-networks",
+    "level": "advanced",
+    "short": "Rescaling activations across the features of each individual example so deep network training stays numerically stable.",
+    "eli5": "Adjusting the volume knob after every song so numbers never get way too loud or whisper quiet.",
+    "example": "Applying RMSNorm or LayerNorm before attention blocks in modern Transformers.",
+    "related": ["transformer", "residual-connection", "neural-network"]
+  }
+]

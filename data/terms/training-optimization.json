@@ -1,0 +1,125 @@
+[
+  {
+    "id": "gradient-descent",
+    "term": "Gradient Descent",
+    "cluster": "training-optimization",
+    "level": "beginner",
+    "short": "An iterative optimization algorithm that nudges model parameters opposite the loss gradient to find lower error.",
+    "eli5": "Standing on a foggy mountainside and taking small steps strictly downhill until you reach the bottom of the valley.",
+    "example": "Updating linear regression or neural network weights step by step until prediction error flattens out.",
+    "related": ["gradient", "learning-rate", "loss-function", "stochastic-gradient-descent"],
+    "demo": "gradient-descent"
+  },
+  {
+    "id": "stochastic-gradient-descent",
+    "term": "Stochastic Gradient Descent (SGD)",
+    "cluster": "training-optimization",
+    "level": "intermediate",
+    "short": "Approximating the true dataset gradient using small random mini-batches so massive models train quickly and generalize well.",
+    "eli5": "Instead of polling every person in a city before every step, you ask a quick random handful and keep moving.",
+    "example": "Training image models over millions of photos using mini-batches of 64 images at a time.",
+    "related": ["gradient-descent", "batch-size", "adam-optimizer", "epoch"]
+  },
+  {
+    "id": "learning-rate",
+    "term": "Learning Rate",
+    "cluster": "training-optimization",
+    "level": "beginner",
+    "short": "A hyperparameter controlling how large a step weights take during each gradient update—too small stalls, too large overshoots.",
+    "eli5": "Your stride length walking downhill: tiny baby steps take forever, giant leaps might jump right past the valley!",
+    "example": "Using warmup followed by cosine decay from 3e-4 down to 3e-5 during LLM pretraining.",
+    "related": ["gradient-descent", "adam-optimizer", "loss-function"],
+    "demo": "gradient-descent"
+  },
+  {
+    "id": "adam-optimizer",
+    "term": "Adam Optimizer",
+    "cluster": "training-optimization",
+    "level": "intermediate",
+    "short": "Adaptive Moment Estimation—an optimizer that tracks running momentum and per-parameter scaling for fast, reliable deep learning.",
+    "eli5": "A smart hiker carrying momentum down flat trails while automatically shortening steps on shaky, steep cliffs.",
+    "example": "AdamW serving as the standard default optimizer for training modern Transformer language models.",
+    "related": ["gradient-descent", "stochastic-gradient-descent", "learning-rate", "weight-decay"]
+  },
+  {
+    "id": "loss-function",
+    "term": "Loss Function",
+    "cluster": "training-optimization",
+    "level": "beginner",
+    "short": "A mathematical formula scoring how wrong a model's predictions are compared to the target truth.",
+    "eli5": "The penalty meter that goes up whenever the model guesses poorly, giving training a clear number to shrink.",
+    "example": "Cross-entropy loss for classification and next-token prediction; mean squared error for regression.",
+    "related": ["cross-entropy-loss", "gradient-descent", "backpropagation"],
+    "demo": "gradient-descent"
+  },
+  {
+    "id": "epoch",
+    "term": "Epoch",
+    "cluster": "training-optimization",
+    "level": "beginner",
+    "short": "One complete pass through every single example in the entire training dataset.",
+    "eli5": "Reading an entire textbook from cover to cover once; you might read it several times to master the material.",
+    "example": "Fine-tuning a classifier for 5 epochs over 20,000 labeled customer tickets.",
+    "related": ["batch-size", "training-dataset", "stochastic-gradient-descent"]
+  },
+  {
+    "id": "batch-size",
+    "term": "Batch Size",
+    "cluster": "training-optimization",
+    "level": "beginner",
+    "short": "The number of training examples processed together in parallel before computing an average gradient and updating weights.",
+    "eli5": "Grading a stack of 32 quizzes at once before adjusting how you teach the next lesson.",
+    "example": "Using gradient accumulation to simulate a batch size of 2 million tokens across multiple GPUs.",
+    "related": ["stochastic-gradient-descent", "epoch", "training-dataset"]
+  },
+  {
+    "id": "dropout",
+    "term": "Dropout",
+    "cluster": "training-optimization",
+    "level": "intermediate",
+    "short": "A regularization technique that randomly silences a fraction of neurons during each training step so the network avoids brittle co-dependencies.",
+    "eli5": "Practicing basketball while randomly benching players so the whole team learns to cover for each other.",
+    "example": "Applying 10% dropout to attention and residual connections during fine-tuning on small datasets.",
+    "related": ["overfitting", "weight-decay", "neural-network"]
+  },
+  {
+    "id": "weight-decay",
+    "term": "Weight Decay",
+    "cluster": "training-optimization",
+    "level": "intermediate",
+    "short": "A regularization penalty that gently shrinks large model weights toward zero to favor simpler, better-generalizing solutions.",
+    "eli5": "Keeping weights on a gentle leash so no single parameter shouts way louder than the rest.",
+    "example": "Configuring AdamW with weight_decay=0.1 when pretraining large Transformers.",
+    "related": ["overfitting", "bias-variance-tradeoff", "adam-optimizer", "dropout"]
+  },
+  {
+    "id": "lora",
+    "term": "LoRA (Low-Rank Adaptation)",
+    "cluster": "training-optimization",
+    "level": "advanced",
+    "short": "A parameter-efficient fine-tuning method that freezes base model weights and trains tiny low-rank adapter matrices alongside them.",
+    "eli5": "Instead of reprinting a whole encyclopedia, you slip in a thin booklet of sticky notes that adjusts how chapters read.",
+    "example": "Fine-tuning a 70B-parameter open-weights LLM on a single GPU by updating under 1% of parameters.",
+    "related": ["fine-tuning", "matrix-multiplication", "quantization", "llm"]
+  },
+  {
+    "id": "rlhf",
+    "term": "RLHF (Reinforcement Learning from Human Feedback)",
+    "cluster": "training-optimization",
+    "level": "intermediate",
+    "short": "An alignment pipeline where human preference rankings train a reward model that guides reinforcement learning to make LLMs helpful and safe.",
+    "eli5": "Like a coach watching two practice answers, picking the better one, and teaching the AI to earn higher scores from the coach.",
+    "example": "Turning a raw text-completing base LLM into a polite, instruction-following conversational assistant.",
+    "related": ["llm", "fine-tuning", "ppo", "reward-function", "ai-alignment"]
+  },
+  {
+    "id": "quantization",
+    "term": "Quantization",
+    "cluster": "training-optimization",
+    "level": "advanced",
+    "short": "Reducing the numerical precision of model weights (e.g., from 16-bit floats to 4-bit integers) to shrink memory and speed up inference.",
+    "eli5": "Rounding measurements from '3.14159265 inches' to '3.1 inches' so the blueprint fits in half the storage with almost identical shape.",
+    "example": "Running an 8-billion-parameter LLM smoothly on a laptop using 4-bit weight quantization.",
+    "related": ["lora", "llm", "neural-network"]
+  }
+]

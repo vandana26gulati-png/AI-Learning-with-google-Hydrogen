@@ -1,0 +1,122 @@
+[
+  {
+    "id": "artificial-intelligence",
+    "term": "Artificial Intelligence",
+    "cluster": "foundations",
+    "level": "beginner",
+    "short": "The broad field of building computer systems capable of performing tasks that normally require human intelligence.",
+    "eli5": "Teaching a computer to notice patterns, solve puzzles, and make helpful choices on its own.",
+    "example": "A navigation app predicting traffic jams and suggesting a faster route.",
+    "related": ["machine-learning", "natural-language-processing", "computer-vision", "reinforcement-learning"]
+  },
+  {
+    "id": "machine-learning",
+    "term": "Machine Learning",
+    "cluster": "foundations",
+    "level": "beginner",
+    "short": "A branch of AI where algorithms improve their performance on a task by learning patterns from data rather than following hardcoded rules.",
+    "eli5": "Instead of writing a strict recipe, you show the computer thousands of finished dishes until it figures out how to cook.",
+    "example": "A spam filter learning which words signal junk mail from millions of labeled emails.",
+    "related": ["artificial-intelligence", "supervised-learning", "unsupervised-learning", "neural-network"]
+  },
+  {
+    "id": "supervised-learning",
+    "term": "Supervised Learning",
+    "cluster": "foundations",
+    "level": "beginner",
+    "short": "Training a model on input-output pairs where every training example comes with a known correct answer.",
+    "eli5": "Studying with flashcards that have the question on the front and the answer on the back.",
+    "example": "Training a house-price predictor using past sales records with square footage and actual sale prices.",
+    "related": ["machine-learning", "classification", "regression", "training-dataset"]
+  },
+  {
+    "id": "unsupervised-learning",
+    "term": "Unsupervised Learning",
+    "cluster": "foundations",
+    "level": "beginner",
+    "short": "Discovering hidden structure, groups, or patterns in data without any human-provided labels.",
+    "eli5": "Sorting a mixed pile of LEGO bricks into groups by shape and color without anyone telling you the group names.",
+    "example": "Grouping online shoppers into distinct purchasing personas based solely on browsing behavior.",
+    "related": ["machine-learning", "k-means-clustering", "dimensionality-reduction", "word-embeddings"]
+  },
+  {
+    "id": "classification",
+    "term": "Classification",
+    "cluster": "foundations",
+    "level": "beginner",
+    "short": "A supervised learning task that assigns an input to one of several predefined discrete categories.",
+    "eli5": "Sorting incoming mail into labeled bins like 'Bills', 'Friends', or 'Spam'.",
+    "example": "Predicting whether a medical scan shows a benign or malignant tumor.",
+    "related": ["supervised-learning", "decision-tree", "image-classification", "confusion-matrix"]
+  },
+  {
+    "id": "regression",
+    "term": "Regression",
+    "cluster": "foundations",
+    "level": "beginner",
+    "short": "A supervised learning task that predicts a continuous numerical quantity rather than a category.",
+    "eli5": "Guessing how many inches tall a puppy will grow based on its paws and parents.",
+    "example": "Forecasting tomorrow's electricity demand in megawatts from weather and calendar data.",
+    "related": ["supervised-learning", "loss-function", "overfitting", "gradient-descent"]
+  },
+  {
+    "id": "decision-tree",
+    "term": "Decision Tree",
+    "cluster": "foundations",
+    "level": "beginner",
+    "short": "A flowchart-like model that makes predictions by splitting data through a sequence of simple if-then feature questions.",
+    "eli5": "Playing a game of Twenty Questions where each yes-or-no answer narrows down the final guess.",
+    "example": "A loan screening tree checking income above $50k, then credit history, then debt ratio.",
+    "related": ["classification", "random-forest", "explainable-ai", "overfitting"]
+  },
+  {
+    "id": "random-forest",
+    "term": "Random Forest",
+    "cluster": "foundations",
+    "level": "intermediate",
+    "short": "An ensemble algorithm that trains many diverse decision trees on random data subsets and combines their votes.",
+    "eli5": "Asking a hundred different experts for their opinion and going with the majority vote so one person's mistake doesn't ruin the answer.",
+    "example": "Predicting customer churn reliably across tabular CRM metrics without heavy tuning.",
+    "related": ["decision-tree", "overfitting", "bias-variance-tradeoff", "feature-engineering"]
+  },
+  {
+    "id": "support-vector-machine",
+    "term": "Support Vector Machine",
+    "cluster": "foundations",
+    "level": "intermediate",
+    "short": "A classical classifier that finds the separating boundary with the widest possible safety margin between classes.",
+    "eli5": "Drawing the widest possible road down the middle between two neighborhoods so neither side's houses are close to the line.",
+    "example": "Separating handwritten digit classes in compact feature spaces using a kernel boundary.",
+    "related": ["classification", "vector", "dot-product", "machine-learning"]
+  },
+  {
+    "id": "k-means-clustering",
+    "term": "K-Means Clustering",
+    "cluster": "foundations",
+    "level": "intermediate",
+    "short": "An unsupervised algorithm that partitions data points into k groups by iteratively assigning points to the nearest cluster center.",
+    "eli5": "Dropping k flags on a playground, having kids stand by the closest flag, then moving each flag to the center of its group.",
+    "example": "Compressing an image's color palette down to its 16 most representative colors.",
+    "related": ["unsupervised-learning", "vector", "cosine-similarity", "dimensionality-reduction"]
+  },
+  {
+    "id": "overfitting",
+    "term": "Overfitting",
+    "cluster": "foundations",
+    "level": "intermediate",
+    "short": "When a model memorizes noise and quirks in the training data so closely that it performs poorly on new, unseen examples.",
+    "eli5": "Memorizing the exact practice test questions instead of learning the math, then failing when the real test changes the numbers.",
+    "example": "A curve that zigzags through every training point at 100% accuracy but misses new test points wildly.",
+    "related": ["bias-variance-tradeoff", "validation-set", "dropout", "weight-decay"]
+  },
+  {
+    "id": "bias-variance-tradeoff",
+    "term": "Bias-Variance Tradeoff",
+    "cluster": "foundations",
+    "level": "advanced",
+    "short": "The fundamental balance between underfitting from overly simple assumptions (bias) and overfitting to training noise (variance).",
+    "eli5": "A bow that always shoots too far left has high bias; a bow that scatters arrows everywhere has high variance.",
+    "example": "Choosing tree depth in a model so it captures real trends without memorizing random fluctuations.",
+    "related": ["overfitting", "random-forest", "validation-set", "weight-decay"]
+  }
+]

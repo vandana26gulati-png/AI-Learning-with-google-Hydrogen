@@ -1,0 +1,122 @@
+[
+  {
+    "id": "linear-algebra",
+    "term": "Linear Algebra",
+    "cluster": "math-stats",
+    "level": "beginner",
+    "short": "The mathematics of vectors, matrices, and linear transformations that underlies almost all neural network computation.",
+    "eli5": "The rulebook for moving, stretching, and combining lists and grids of numbers all at once.",
+    "example": "Running an entire Transformer layer in one GPU operation using matrix math.",
+    "related": ["vector", "matrix-multiplication", "dot-product", "dimensionality-reduction"]
+  },
+  {
+    "id": "vector",
+    "term": "Vector",
+    "cluster": "math-stats",
+    "level": "beginner",
+    "short": "An ordered list of numbers representing a point or direction in multi-dimensional space.",
+    "eli5": "A set of coordinates—like GPS latitude, longitude, and altitude—that places an idea or object on a map.",
+    "example": "Representing a user profile as [age, clicks_per_day, avg_spend].",
+    "related": ["linear-algebra", "embedding", "dot-product", "cosine-similarity"]
+  },
+  {
+    "id": "matrix-multiplication",
+    "term": "Matrix Multiplication",
+    "cluster": "math-stats",
+    "level": "beginner",
+    "short": "Combining two grids of numbers by taking dot products of rows and columns to transform data through model weights.",
+    "eli5": "A giant calculator shortcut that mixes hundreds of ingredients into new recipes in one synchronized step.",
+    "example": "Multiplying an input token embedding by a weight matrix to compute query vectors in attention.",
+    "related": ["linear-algebra", "dot-product", "forward-pass", "neural-network"]
+  },
+  {
+    "id": "dot-product",
+    "term": "Dot Product",
+    "cluster": "math-stats",
+    "level": "intermediate",
+    "short": "Multiplying matching entries of two vectors and summing them to measure alignment and magnitude.",
+    "eli5": "Scoring how much two arrows point in the same direction—big positive score if they agree, zero if perpendicular.",
+    "example": "Computing raw attention compatibility scores between a Query vector and Key vectors.",
+    "related": ["vector", "cosine-similarity", "attention", "matrix-multiplication"]
+  },
+  {
+    "id": "cosine-similarity",
+    "term": "Cosine Similarity",
+    "cluster": "math-stats",
+    "level": "intermediate",
+    "short": "A measure of similarity between two vectors based on the angle between them, ignoring their overall length.",
+    "eli5": "Checking if two compasses point in the same direction, regardless of how big each compass is.",
+    "example": "Ranking documents in a vector database by how closely their embeddings align with a search query.",
+    "related": ["vector", "dot-product", "embedding", "vector-database"]
+  },
+  {
+    "id": "probability-distribution",
+    "term": "Probability Distribution",
+    "cluster": "math-stats",
+    "level": "beginner",
+    "short": "A mathematical function that assigns a likelihood to every possible outcome of a random event, summing to 1.",
+    "eli5": "Dividing 100% of a pie across all possible guesses to show which outcomes are likely and which are rare.",
+    "example": "An LLM assigning 62% to 'cat', 18% to 'dog', and 20% across other vocabulary words.",
+    "related": ["softmax", "next-token-prediction", "bayes-theorem", "temperature"]
+  },
+  {
+    "id": "bayes-theorem",
+    "term": "Bayes' Theorem",
+    "cluster": "math-stats",
+    "level": "intermediate",
+    "short": "A rule for updating the probability of a hypothesis as new evidence arrives.",
+    "eli5": "Changing your mind about whether it will rain after you step outside and see dark clouds.",
+    "example": "Updating the chance an email is spam after observing suspicious phrases like 'claim prize'.",
+    "related": ["probability-distribution", "classification", "machine-learning"]
+  },
+  {
+    "id": "softmax",
+    "term": "Softmax",
+    "cluster": "math-stats",
+    "level": "intermediate",
+    "short": "A function that converts raw model scores (logits) into positive probabilities that sum cleanly to 1.",
+    "eli5": "Turning messy judge scores like [5, 2, -1] into clean percentages like [95%, 4.7%, 0.3%].",
+    "example": "Transforming an LLM's final vocabulary logits into next-token sampling probabilities.",
+    "related": ["probability-distribution", "temperature", "attention", "next-token-prediction"]
+  },
+  {
+    "id": "cross-entropy-loss",
+    "term": "Cross-Entropy Loss",
+    "cluster": "math-stats",
+    "level": "advanced",
+    "short": "A loss function measuring how far a model's predicted probability distribution is from the true target distribution.",
+    "eli5": "A penalty score that stays tiny when the model bets heavily on the right answer and spikes sharply when it is confidently wrong.",
+    "example": "Training a language model to minimize surprise on the actual next token in a corpus.",
+    "related": ["loss-function", "softmax", "perplexity", "backpropagation"]
+  },
+  {
+    "id": "derivative",
+    "term": "Derivative",
+    "cluster": "math-stats",
+    "level": "beginner",
+    "short": "The instantaneous rate of change of a function with respect to a single input variable.",
+    "eli5": "Looking at a hill right under your feet to tell whether stepping right goes uphill or downhill and how steep it is.",
+    "example": "Measuring how much prediction error changes if one neural network weight nudges up slightly.",
+    "related": ["gradient", "gradient-descent", "backpropagation"]
+  },
+  {
+    "id": "gradient",
+    "term": "Gradient",
+    "cluster": "math-stats",
+    "level": "intermediate",
+    "short": "A vector of partial derivatives pointing in the direction of steepest increase of a multi-variable function.",
+    "eli5": "A compass arrow on a mountain slope that points straight uphill—so walking the opposite way takes you downhill fastest.",
+    "example": "Computing how all millions of weights should shift together to lower training loss.",
+    "related": ["derivative", "gradient-descent", "backpropagation", "learning-rate"]
+  },
+  {
+    "id": "dimensionality-reduction",
+    "term": "Dimensionality Reduction",
+    "cluster": "math-stats",
+    "level": "advanced",
+    "short": "Techniques like PCA or UMAP that compress high-dimensional data into fewer dimensions while preserving key structure.",
+    "eli5": "Taking a 3D sculpture and casting a shadow on a wall so you can still recognize its shape in 2D.",
+    "example": "Projecting 1536-dimensional text embeddings onto a 2D scatter map for visual inspection.",
+    "related": ["linear-algebra", "unsupervised-learning", "latent-space", "embedding"]
+  }
+]

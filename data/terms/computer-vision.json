@@ -1,0 +1,122 @@
+[
+  {
+    "id": "computer-vision",
+    "term": "Computer Vision",
+    "cluster": "computer-vision",
+    "level": "beginner",
+    "short": "The field of AI focused on enabling machines to interpret, understand, and extract meaning from images and video.",
+    "eli5": "Giving computers eyes and visual common sense so pixels turn into recognizable objects and scenes.",
+    "example": "Autonomous vehicles spotting pedestrians, lane markings, and traffic signs in camera feeds.",
+    "related": ["artificial-intelligence", "convolutional-neural-network", "object-detection", "vision-transformer"]
+  },
+  {
+    "id": "convolutional-neural-network",
+    "term": "Convolutional Neural Network (CNN)",
+    "cluster": "computer-vision",
+    "level": "intermediate",
+    "short": "A neural architecture using sliding local filters to detect spatial hierarchies from edges up to whole objects.",
+    "eli5": "Scanning a photo with tiny magnifying glasses—first spotting lines and corners, then eyes and ears, then a cat.",
+    "example": "ResNet architectures classifying thousands of wildlife photos from camera traps.",
+    "related": ["convolution", "pooling-layer", "feature-map", "image-classification"]
+  },
+  {
+    "id": "convolution",
+    "term": "Convolution",
+    "cluster": "computer-vision",
+    "level": "intermediate",
+    "short": "Sliding a small learnable weight kernel across an image grid to compute local responses like edges, textures, or blobs.",
+    "eli5": "Stamping a small stencil across every patch of a picture to measure where a certain pattern shows up.",
+    "example": "A 3x3 vertical edge filter lighting up strongly along building pillars.",
+    "related": ["convolutional-neural-network", "feature-map", "pooling-layer"]
+  },
+  {
+    "id": "pooling-layer",
+    "term": "Pooling Layer",
+    "cluster": "computer-vision",
+    "level": "beginner",
+    "short": "A downsampling step that summarizes small patches of a feature map (e.g., taking the max value) to shrink size and add shift tolerance.",
+    "eli5": "Zooming out on a mosaic by keeping only the brightest tile in every 2x2 square.",
+    "example": "2x2 max pooling halving image width and height between convolutional blocks.",
+    "related": ["convolutional-neural-network", "convolution", "feature-map"]
+  },
+  {
+    "id": "image-classification",
+    "term": "Image Classification",
+    "cluster": "computer-vision",
+    "level": "beginner",
+    "short": "Predicting a single category label that describes the primary subject of an entire image.",
+    "eli5": "Looking at a photo and putting one sticker on it: 'golden retriever' or 'espresso'.",
+    "example": "Sorting uploaded user photos into plant species categories.",
+    "related": ["classification", "convolutional-neural-network", "vision-transformer"]
+  },
+  {
+    "id": "object-detection",
+    "term": "Object Detection",
+    "cluster": "computer-vision",
+    "level": "intermediate",
+    "short": "Simultaneously identifying what objects appear in an image and locating each one with a tight bounding box.",
+    "eli5": "Both naming every item in a room and drawing a neat rectangle around where each one sits.",
+    "example": "Warehouse cameras counting and boxing pallets, forklifts, and safety vests in real time.",
+    "related": ["bounding-box", "image-classification", "semantic-segmentation", "computer-vision"]
+  },
+  {
+    "id": "semantic-segmentation",
+    "term": "Semantic Segmentation",
+    "cluster": "computer-vision",
+    "level": "advanced",
+    "short": "Assigning a class label to every individual pixel in an image to trace exact object boundaries.",
+    "eli5": "Coloring a photo like a precise coloring book where every road pixel is gray and every tree pixel is green.",
+    "example": "Separating satellite imagery pixel-by-pixel into forest, water, farmland, and buildings.",
+    "related": ["object-detection", "computer-vision", "convolutional-neural-network"]
+  },
+  {
+    "id": "vision-transformer",
+    "term": "Vision Transformer (ViT)",
+    "cluster": "computer-vision",
+    "level": "advanced",
+    "short": "An image architecture that splits an image into square patches and feeds them as visual tokens into a Transformer.",
+    "eli5": "Cutting a photo into a grid of puzzle squares and letting a Transformer read them like words in a sentence.",
+    "example": "Powering multimodal models that jointly reason over screenshots and user questions.",
+    "related": ["transformer", "self-attention", "multimodal-model", "image-classification"]
+  },
+  {
+    "id": "feature-map",
+    "term": "Feature Map",
+    "cluster": "computer-vision",
+    "level": "intermediate",
+    "short": "The 2D grid of activations produced when a convolutional filter slides across an image, showing where a pattern was detected.",
+    "eli5": "A heatmap tracing everywhere a specific shape—like curved whiskers or brick textures—appeared in the photo.",
+    "example": "Early layers yielding sharp edge maps while deep layers highlight wheel or face regions.",
+    "related": ["convolution", "convolutional-neural-network", "hidden-layer"]
+  },
+  {
+    "id": "data-augmentation",
+    "term": "Data Augmentation",
+    "cluster": "computer-vision",
+    "level": "beginner",
+    "short": "Artificially expanding training data by applying realistic flips, crops, rotations, or color shifts that preserve the true label.",
+    "eli5": "Practicing recognizing a friend from tilted, sunny, and shadowed photos so you still know them in bad lighting.",
+    "example": "Horizontally flipping street-view photos during training to double dataset diversity without relabeling.",
+    "related": ["overfitting", "training-dataset", "image-classification"]
+  },
+  {
+    "id": "bounding-box",
+    "term": "Bounding Box",
+    "cluster": "computer-vision",
+    "level": "beginner",
+    "short": "A rectangular coordinate frame [x, y, width, height] marking the spatial location of a detected object.",
+    "eli5": "The tight imaginary box drawn around an object so a computer knows exactly where it begins and ends.",
+    "example": "Outputting [120, 80, 210, 340] for a bicycle detected on a crosswalk.",
+    "related": ["object-detection", "computer-vision", "semantic-segmentation"]
+  },
+  {
+    "id": "optical-character-recognition",
+    "term": "Optical Character Recognition (OCR)",
+    "cluster": "computer-vision",
+    "level": "intermediate",
+    "short": "Converting photographed, scanned, or handwritten text inside images into editable machine-readable strings.",
+    "eli5": "Looking at a photo of a paper receipt and typing every word and price into a spreadsheet automatically.",
+    "example": "Digitizing street signs, license plates, and scanned PDF invoices.",
+    "related": ["computer-vision", "natural-language-processing", "bounding-box"]
+  }
+]

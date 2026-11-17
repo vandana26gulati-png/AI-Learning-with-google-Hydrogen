@@ -1,0 +1,103 @@
+[
+  {
+    "id": "how-llm-works",
+    "title": "How an LLM works",
+    "description": "Follow text from raw tokens into vectors, attention layers, large-scale pretraining, and human alignment.",
+    "steps": [
+      {
+        "termId": "token",
+        "caption": "Text is first broken into small pieces called tokens—words, subwords, or punctuation—so a model can assign each piece an integer ID."
+      },
+      {
+        "termId": "embedding",
+        "caption": "Each token ID is looked up in an embedding table, turning discrete symbols into dense vectors that capture semantic meaning."
+      },
+      {
+        "termId": "attention",
+        "caption": "Attention lets every token inspect all earlier tokens in the sentence and weigh which context words matter most right now."
+      },
+      {
+        "termId": "transformer",
+        "caption": "Stacking attention and feed-forward blocks creates a Transformer—the parallel architecture behind modern language models."
+      },
+      {
+        "termId": "pretraining",
+        "caption": "During pretraining, the model predicts the next token across trillions of words, absorbing grammar, facts, and reasoning patterns."
+      },
+      {
+        "termId": "fine-tuning",
+        "caption": "Supervised fine-tuning adapts the base predictor into a helpful assistant trained on curated instruction-response pairs."
+      },
+      {
+        "termId": "rlhf",
+        "caption": "Reinforcement Learning from Human Feedback shapes the model's tone and helpfulness using human preference rankings."
+      },
+      {
+        "termId": "llm",
+        "caption": "The result is a Large Language Model: a general-purpose text engine capable of summarizing, coding, translating, and reasoning."
+      }
+    ]
+  },
+  {
+    "id": "nlp-from-scratch",
+    "title": "NLP from scratch",
+    "description": "Trace the evolution of Natural Language Processing from classical text cleaning and word counts to modern Transformers.",
+    "steps": [
+      {
+        "termId": "text-preprocessing",
+        "caption": "Early and modern pipelines begin by normalizing text—cleaning noise, handling casing, and standardizing encodings."
+      },
+      {
+        "termId": "tokenization",
+        "caption": "Tokenization splits raw character streams into manageable units like words or subwords for downstream modeling."
+      },
+      {
+        "termId": "bag-of-words",
+        "caption": "Bag of Words represents documents as simple word-frequency counts—fast and interpretable, though word order is lost."
+      },
+      {
+        "termId": "word-embeddings",
+        "caption": "Word embeddings placed words in continuous vector space so synonyms sit close together and analogies become vector math."
+      },
+      {
+        "termId": "sequence-models",
+        "caption": "Sequence models like RNNs and LSTMs restored word order by reading tokens step-by-step and carrying hidden memory."
+      },
+      {
+        "termId": "transformer",
+        "caption": "Transformers replaced slow step-by-step recurrence with parallel self-attention, unlocking long-range understanding."
+      }
+    ]
+  },
+  {
+    "id": "prompt-to-answer-rag",
+    "title": "From prompt to answer (RAG)",
+    "description": "See how Retrieval-Augmented Generation grounds an LLM's response in fresh, external knowledge.",
+    "steps": [
+      {
+        "termId": "prompt",
+        "caption": "Everything starts with a user prompt—the question, instruction, or task sent into the system."
+      },
+      {
+        "termId": "embedding",
+        "caption": "An embedding model converts the user's question into a numeric vector representing its semantic intent."
+      },
+      {
+        "termId": "vector-database",
+        "caption": "A vector database stores millions of document chunks as embeddings and indexes them for fast nearest-neighbor search."
+      },
+      {
+        "termId": "retrieval",
+        "caption": "Retrieval fetches the top matching passages whose vectors lie closest to the prompt's query vector."
+      },
+      {
+        "termId": "context-window",
+        "caption": "Those retrieved passages are injected alongside the user's prompt inside the model's context window."
+      },
+      {
+        "termId": "generation",
+        "caption": "Finally, the model generates an answer conditioned on the retrieved evidence, reducing guesswork and hallucinations."
+      }
+    ]
+  }
+]

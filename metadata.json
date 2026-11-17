@@ -1,0 +1,6 @@
+{
+  "name": "AI Concept Galaxy",
+  "description": "An interactive, movement-based star map for exploring AI, NLP, and LLM concepts with guided journeys and animated mini-demos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
